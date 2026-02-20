@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gradient Color Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Gradient Color Generator</h1>
+      <p>Create beautiful CSS gradients instantly.</p>
+    </header>
+
+    <main class="app-main">
+      <section class="controls-card">
+        <div class="field-group">
+          <label for="color1">Color 1</label>
+          <input type="color" id="color1" value="#ff6b6b" />
+          <input type="text" id="color1Text" class="hex-input" value="#ff6b6b" />
+        </div>
+
+        <div class="field-group">
+          <label for="color2">Color 2</label>
+          <input type="color" id="color2" value="#5f27cd" />
+          <input type="text" id="color2Text" class="hex-input" value="#5f27cd" />
+        </div>
+
+        <div class="field-group">
+          <label for="direction">Direction</label>
+          <select id="direction">
+            <option value="to right">Left → Right</option>
+            <option value="to left">Right → Left</option>
+            <option value="to bottom">Top → Bottom</option>
+            <option value="to top">Bottom → Top</option>
+            <option value="to bottom right">Top Left → Bottom Right</option>
+            <option value="to bottom left">Top Right → Bottom Left</option>
+            <option value="to top right">Bottom Left → Top Right</option>
+            <option value="to top left">Bottom Right → Top Left</option>
+          </select>
+        </div>
+
+        <div class="buttons-row">
+          <button id="randomBtn" class="btn primary">Random Gradient</button>
+          <button id="swapBtn" class="btn ghost">Swap Colors</button>
+        </div>
+      </section>
+
+      <section class="preview-card">
+        <div id="preview" class="gradient-preview"></div>
+
+        <div class="code-section">
+          <div class="code-header">
+            <span>CSS Code</span>
+            <button id="copyBtn" class="btn small">Copy</button>
+          </div>
+          <pre id="codeBlock" class="code-block"></pre>
+          <span id="copyStatus" class="copy-status" aria-live="polite"></span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>Built with HTML, CSS &amp; JavaScript</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
